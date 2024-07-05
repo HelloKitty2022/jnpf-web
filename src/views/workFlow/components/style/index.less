@@ -1,0 +1,127 @@
+.basic-flow-parser {
+  .header-title {
+    font-size: 18px;
+    max-width: 40vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .flow-urgent-value {
+    line-height: 23px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    padding-left: 12px;
+    &.urgent1 {
+      color: #409eff;
+      &::before {
+        background: #409eff;
+      }
+    }
+    &.urgent2 {
+      color: #e6a23c;
+      &::before {
+        background: #e6a23c;
+      }
+    }
+    &.urgent3 {
+      color: #f56c6c;
+      &::before {
+        background: #f56c6c;
+      }
+    }
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      background: #333;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+  }
+  .header-options {
+    .ant-btn {
+      margin-left: 10px;
+    }
+  }
+  .approve-result {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+    .approve-result-img {
+      width: 100%;
+      height: 100%;
+      &.wait {
+        background: url('/@/assets/images/flowStatus/wait.png') no-repeat;
+        background-size: 100%;
+      }
+      &.adopt {
+        background: url('/@/assets/images/flowStatus/adopt.png') no-repeat;
+        background-size: 100%;
+      }
+      &.reject {
+        background: url('/@/assets/images/flowStatus/reject.png') no-repeat;
+        background-size: 100%;
+      }
+      &.revoke {
+        background: url('/@/assets/images/flowStatus/revoke.png') no-repeat;
+        background-size: 100%;
+      }
+      &.cancel {
+        background: url('/@/assets/images/flowStatus/cancel.png') no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  .flow-parser-tabs {
+    height: 100%;
+    &.no-head-margin > .ant-tabs-nav {
+      margin-bottom: 0;
+    }
+    &.ant-tabs-card {
+      & > .ant-tabs-nav > .ant-tabs-nav-wrap {
+        padding: 0;
+        & > .ant-tabs-nav-list {
+          & > .ant-tabs-tab + .ant-tabs-tab {
+            margin-left: 2px;
+          }
+        }
+      }
+      & > .ant-tabs-content-holder > .ant-tabs-content {
+        & > .ant-tabs-tabpane {
+          padding: 0;
+        }
+      }
+    }
+    & > .ant-tabs-nav > .ant-tabs-nav-wrap {
+      padding: 0 20px;
+      & > .ant-tabs-nav-list {
+        & > .ant-tabs-tab + .ant-tabs-tab {
+          margin-left: 40px;
+        }
+      }
+    }
+    & > .ant-tabs-content-holder > .ant-tabs-content {
+      height: 100%;
+      overflow: hidden;
+      & > .ant-tabs-tabpane {
+        height: 100%;
+        overflow: auto;
+        padding: 0 10px 10px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .process-flow-container {
+    .scale-slider {
+      right: 10px;
+    }
+  }
+}

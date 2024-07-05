@@ -1,0 +1,107 @@
+@import './pagination.less';
+@import './input.less';
+@import './btn.less';
+@import './table.less';
+
+.ant-image-preview-root {
+  img {
+    display: unset;
+  }
+}
+
+span.anticon:not(.app-iconify) {
+  vertical-align: 0.125em !important;
+}
+
+.ant-back-top {
+  right: 20px;
+  bottom: 20px;
+}
+
+.collapse-container__body {
+  > .ant-descriptions {
+    margin-left: 6px;
+  }
+}
+
+.ant-image-preview-operations {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.ant-popover {
+  &-content {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  }
+}
+
+// =================================
+// ==============modal message======
+// =================================
+.modal-icon-warning {
+  color: @warning-color !important;
+}
+
+.modal-icon-success {
+  color: @success-color !important;
+}
+
+.modal-icon-error {
+  color: @error-color !important;
+}
+
+.modal-icon-info {
+  color: @primary-color !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after,
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after {
+  border-top: 0 !important;
+  border-left: 0 !important;
+}
+
+.ant-form-item-control-input-content {
+  > div {
+    > div {
+      max-width: 100%;
+    }
+  }
+  .ant-picker {
+    width: 100%;
+  }
+}
+.ant-form {
+  .ant-form-item {
+    margin-bottom: 20px;
+
+    &.ant-form-item-with-help {
+      margin-bottom: 0;
+      .ant-form-item-explain {
+        height: 20px;
+        line-height: 20px;
+        min-height: 20px;
+      }
+    }
+  }
+}
+.ant-steps {
+  &.ant-steps-small {
+    .ant-steps-item-icon {
+      line-height: 22px;
+    }
+  }
+}
+.ant-table-cell {
+  & > .ant-rate {
+    white-space: normal;
+  }
+  &[style*='text-align: right'] {
+    .jnpf-sign {
+      justify-content: flex-end;
+    }
+  }
+  &[style*='text-align: center'] {
+    .jnpf-sign {
+      justify-content: center;
+    }
+  }
+}
